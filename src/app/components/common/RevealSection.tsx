@@ -12,11 +12,11 @@ interface RevealSectionProps {
 }
 
 const variantClasses: Record<AnimationVariant, string> = {
-    'fade-up': 'animate-reveal-up',
-    'fade-left': 'animate-reveal-left',
-    'fade-right': 'animate-reveal-right',
-    'fade-scale': 'animate-reveal-scale',
-    'fade-in': 'animate-reveal-fade',
+    'fade-up': 'sm:animate-reveal-up',
+    'fade-left': 'sm:animate-reveal-left',
+    'fade-right': 'sm:animate-reveal-right',
+    'fade-scale': 'sm:animate-reveal-scale',
+    'fade-in': 'sm:animate-reveal-fade',
 }
 
 export default function RevealSection({
