@@ -1,8 +1,4 @@
-import Image from "next/image";
 import Section from "../common/Section";
-import Typwriter from "../typewriter";
-import DownArrow from "../common/DownArrow";
-import MyImage from "../../../../public/profile-pic-square.png";
 import Editor from "../common/Editor";
 import RevealSection from "../common/RevealSection";
 
