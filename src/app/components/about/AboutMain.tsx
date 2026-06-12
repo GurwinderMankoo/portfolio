@@ -133,7 +133,7 @@ export default function AboutMain({ }: Props) {
                         <span className="text-[12px] font-medium text-accent">Front-End Engineer</span>
                     </div>
 
-                    <div className="space-y-4 text-[14.5px] leading-[1.8] text-secondaryText">
+                    <div className="space-y-4 text-[14.5px] text-justify leading-[1.8] text-secondaryText">
                         <p>
                             Greetings! I&apos;m a frontend developer with over two years of hands-on experience building modern web applications. My work is driven by a passion for crafting clean, performant interfaces that deliver exceptional user experiences.
                         </p>
@@ -146,7 +146,7 @@ export default function AboutMain({ }: Props) {
                     </div>
 
                     <a
-                        className="mt-6 inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-[13.5px] font-medium text-white no-underline transition-all duration-200 hover:-translate-y-[1px] hover:bg-accentHover"
+                        className="mt-6 flex w-fit mx-auto md:inline-flex items-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-[13.5px] font-medium text-white no-underline transition-all duration-200 hover:-translate-y-[1px] hover:bg-accentHover"
                         href="/resume.docx"
                         download
                     >
