@@ -1,6 +1,6 @@
 'use client'
 
-import React, { Dispatch, SetStateAction, createContext, useContext, useEffect, useRef, useState } from "react";
+import React, { Dispatch, SetStateAction, createContext, useContext, useEffect, useState } from "react";
 
 type ScrollObserverStateType = {
     activeSection: string,
@@ -22,9 +22,19 @@ export default function ScrollObserverProvider({ children }: Props) {
     const [showScrollUp, setShowScrollUp] = useState(false);
 
     useEffect(() => {
+        if (!('IntersectionObserver' in window)) {
+            return;
+        }
+
         //create new instance and pass a callback function
         const observer = new IntersectionObserver((entries) => {
-            if (entries[0].target.id !== "home") {
+            const firstEntry = entries[0];
+
+            if (!firstEntry) {
+                return;
+            }
+
+            if (firstEntry.target.id !== "home") {
                 setShowScrollUp(true)
             } else {
                 setShowScrollUp(false)
@@ -64,4 +74,3 @@ export default function ScrollObserverProvider({ children }: Props) {
         </ScrollObserverState.Provider>
     )
 }
-

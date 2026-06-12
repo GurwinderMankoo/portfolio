@@ -2,7 +2,6 @@
 import React, { useRef, useState } from 'react'
 import Input from '../common/CustomInput'
 import TextArea from '../common/TextArea'
-import Image from 'next/image'
 import { errorHandler } from '../common/global'
 import { contactUs } from './action'
 import Button from '../common/Button'
@@ -132,23 +131,17 @@ export default function CustomForm({ }: Props) {
                 onChange={onChangeHandler}
                 error={errors.message}
             />
-            <div>
+            <div className="pt-2">
                 <Button
                     type='button'
-                    className="py-3 px-5 bg-blue-700 text-white rounded-md flex items-center disabled:bg-slate-500 disabled:cursor-not-allowed"
                     disabled={Object.keys(errors).length > 0}
                     onClick={sendMessage}
                     loading={isLoading}
                 >
-                    <span className="mr-1">
-                        <Image
-                            src='/icons/send-icon.svg'
-                            alt='Send Message'
-                            width={16}
-                            height={16}
-                        />
-                    </span>
-                    Send message
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    Send Message
                 </Button>
             </div>
             <Notifier ref={notifierRef}>

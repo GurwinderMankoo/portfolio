@@ -10,7 +10,6 @@ export default function UpArrow({ }: Props) {
     const { showScrollUp } = useScrollSection();
 
     const scrollToTopHandler = () => {
-        console.log('clicked')
         scrollTo(0, 0)
     }
 

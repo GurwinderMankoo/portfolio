@@ -3,62 +3,111 @@ import Section from "../common/Section";
 import Typwriter from "../typewriter";
 import DownArrow from "../common/DownArrow";
 import MyImage from "../../../../public/profile-pic-square.png";
-
+import Editor from "../common/Editor";
+import RevealSection from "../common/RevealSection";
 
 export default function HomeMain1() {
     return (
-        <Section id="home">
-            <div className="z-10 h-[calc(100vh_-_72px)] flex justify-center items-center gap-9 md:gap-0 flex-col-reverse md:flex-row">
-                <div className="intro md:w-1/2 md:h-screen flex items-center justify-center md:justify-normal md:-mt-20">
-                    <div className="text-center md:text-left before:absolute before:h-[150px] md:before:h-[300px] before:-translate-y-1/3 before:z-[1]  before:w-[280px] md:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 before:lg:h-[360px]">
-                        <div className='w-full font-bold text-black dark:text-white z-[10] relative'>
-                            <span className="flex justify-center md:justify-start">
-                                <img src='/waving-hand.gif' alt='Hi!!' className='w-10 h-10 -mt-3 mr-2' />
-                                <h5 className="sm:text-xl font-bold">
-                                    {`Hey! I'M`}
-                                </h5>
+        <Section id="home" className="pt-[100px]">
+            <div className="absolute rounded-full 
+                pointer-events-none z-0 w-[400px] 
+                h-[400px] dark:bg-[rgba(99,102,241,0.18)]
+                top-[-100px] right-[0px] blur-[110px] dark:blur-[90px] animate-float
+                [animation-delay:0s]"></div>
+            <div className="absolute rounded-full pointer-events-none animate-[float_8s_ease-in-out_infinite] 
+                    z-0 w-[280px] h-[280px] dark:bg-[rgba(34,211,238,0.1)] bottom-[-60px] left-[8%]
+                    dark:blur-[70px] blur-[90px] [animation-delay:-3s]"
+                    style={{ background: 'rgba(99,102,241,0.13)' }}></div>
+
+            <RevealSection variant="fade-scale">
+            <div className="grid grid-cols-1 md:gap-14 md:grid-cols-2 items-center w-full">
+                {/* -- LEFT SIDE */}
+                <div className="md:block flex items-center flex-col justify-center">
+                    <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-indigo-400/25 bg-indigo-400/10 px-4 py-1.5">
+                        <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                        <span className="text-xs text-indigo-400">
+                            Available for new opportunities
+                        </span>
+                    </div>
+                    <p className="mb-2.5 text-xs font-normal uppercase tracking-[2px] text-secondaryText">Hello, I&apos;m</p>
+                    <h1 className="flex md:block mb-4 font-serif md:text-5xl text-3xl font-bold leading-tight tracking-tight text-primaryText">
+                        <span className="mb-0 md:mb-2 md:inline-block">Gurwinder</span>
+                        <span className="block ml-2 md:ml-0 text-transparent [-webkit-text-stroke:1.5px_#818cf8]">
+                            <span className="relative inline-block">
+                                <svg className="absolute md:left-[-12px] md:top-[-7px] left-[-10px] top-[-3px] rotate-[-45deg] w-[14px] h-[14px] md:w-[20px] md:h-[20px] text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                                    <path d="M2 19h20v3H2v-3zM12 2l3.5 8h6l-4 5 2 8-7.5-4-7.5 4 2-8-4-5h6z"/>
+                                </svg>
+                                <span>S</span>
                             </span>
-                            <h2 className='text-3xl mt-3 md:mt-0 xl:text-6xl md:text-5xl text-blue-700'>
-                                Gurwinder Singh
-                            </h2>
-                            <div className="md:mt-5 mt-3">
-                                <Typwriter
-                                    keywords={['A Web Developer', "A Front Engineer", "A Creative Enthusiast"]}
-                                />
-                            </div>
+                            ingh
+                        </span>
+                    </h1>
+                    <p className="mb-5 text-[15px] leading-[1.6] text-secondaryText">
+                        <strong className="font-medium text-accent">Front-End Engineer</strong> · Crafting seamless web experiences
+                    </p>
+
+                    <p className="mb-9 md:max-w-[390px] max-w-[500px] text-[13.5px] font-light leading-[1.8] text-mutedText">
+                        2+ years building scalable web apps with React, Next.js &amp; Redux.
+                        Passionate about clean UI, performance, and developer experience.
+                    </p>
+
+                    <div className="mb-10 flex items-center gap-3">
+                        <a className="inline-flex items-center gap-2 rounded-lg bg-accent px-[22px] py-[11px] text-[13.5px] font-medium text-white no-underline transition-all duration-200 hover:-translate-y-[1px] hover:bg-accentHover" href="/#projects">
+                            View Projects
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                        </a>
+                        <a className="inline-flex items-center gap-2 rounded-lg border border-borderStrong bg-transparent px-5 py-[11px] text-[13.5px] text-secondaryText no-underline transition-all duration-200 hover:-translate-y-[1px] hover:border-accent hover:text-accent" href="/resume.docx">
+                            Download CV
+                        <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M7 2v7M4 7l3 3 3-3M2 12h10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                        </a>
+                    </div>
+
+                    <div className="flex gap-7 border-t border-border pt-7">
+                        <div className="stat-item">
+                            <div className="mb-1 font-serif text-[26px] font-bold leading-none text-primaryText">2+</div>
+                            <div className="text-[11px] tracking-[0.3px] text-mutedText">Years experience</div>
+                        </div>
+                        <div className="mt-1 h-8 w-[0.5px] self-start bg-border"></div>
+                        <div className="stat-item">
+                            <div className="mb-1 font-serif text-[26px] font-bold leading-none text-primaryText">10+</div>
+                            <div className="text-[11px] tracking-[0.3px] text-mutedText">Projects built</div>
+                        </div>
+                        <div className="mt-1 h-8 w-[0.5px] self-start bg-border"></div>
+                        <div className="stat-item">
+                            <div className="mb-1 font-serif text-[26px] font-bold leading-none text-primaryText">7+</div>
+                            <div className="text-[11px] tracking-[0.3px] text-mutedText">Tech skills</div>
                         </div>
                     </div>
+
                 </div>
-                <div className="image-section md:w-1/2 md:h-screen justify-center md:justify-end flex items-center relative md:-mt-20">
-                    <div className="relative hidden md:block">
-                        <div className="flex items-center justify-center absolute -top-36 -left-28 w-16 h-16 rounded-full bg-gray-300 dark:bg-gray-700 animate-[typescript_8s_ease-in-out_infinite]">
-                            <Image src='/icons/typescript.svg' alt="Redux" width={30} height={30} />
-                        </div>
-                        <div className="flex items-center justify-center absolute top-7 -left-32 w-16 h-16 rounded-full bg-gray-300 dark:bg-gray-700 my-animation-2 animate-[react_8s_ease-in-out_infinite]">
-                            <Image src='/icons/react.svg' alt="Redux" width={40} height={40} />
-                        </div>
-                        <div className="flex items-center justify-center absolute -top-60 left-12 w-16 h-16 rounded-full bg-gray-300 dark:bg-gray-700 my-animation-3 animate-[redux_8s_ease-in-out_infinite]">
-                            <Image src='/icons/redux.svg' alt="Redux" width={40} height={40} />
-                        </div>
 
-                    </div>
-                    <div className="relative w-64 h-64 md:-ml-10 md:mt-0 flex items-center justify-center rounded-full ring-4 ring-gray-300 dark:ring-gray-500 after:absolute after:-left-10 after:md:-mt-10 after:lg:right-14 after:-z-15 after:h-[180px] after:w-[240px] after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40">
-                        <div className="w-60 h-60 relative rounded-full overflow-hidden p-12">
-                            <Image
-                                // className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-                                className="z-10 -bottom-2"
-                                src={MyImage}
-                                alt="Next.js Logo"
-                                fill
-                                loading='lazy'
-                                placeholder="blur"
-                            />
+                {/* -- RIGHT SIDE */}
+                <div className="relative hidden md:block">
 
-                        </div>
+                    {/* -- Floating chips -- */}
+                    <div className="absolute z-[5] flex items-center gap-1.5 whitespace-nowrap rounded-lg border-[0.5px] border-borderStrong bg-card px-3 py-[7px] text-[11.5px] text-secondaryText shadow-[0_4px_20px_rgba(0,0,0,0.25)] light:shadow-[0_4px_20px_rgba(99,102,241,0.1)] animate-chip-float top-[-18px] right-6">
+                        <span className="h-1.5 w-1.5 rounded-full" style={{background: "#34d399"}}></span>
+                        Build successful
                     </div>
+                    <div className="absolute z-[5] flex items-center gap-1.5 whitespace-nowrap rounded-lg border-[0.5px] border-borderStrong bg-card px-3 py-[7px] text-[11.5px] text-secondaryText shadow-[0_4px_20px_rgba(0,0,0,0.25)] light:shadow-[0_4px_20px_rgba(99,102,241,0.1)] animate-chip-float bottom-6 left-[-24px] [animation-delay:-2.5s]">
+                        <span className="h-1.5 w-1.5 rounded-full" style={{ background: "#22d3ee" }}></span>
+                        TypeScript · strict mode
+                    </div>
+
+                    <Editor />
+
                 </div>
             </div>
-            <DownArrow />
+            </RevealSection>
+            <RevealSection variant="fade-scale">
+            <div className="absolute bottom-7 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-1.5 opacity-30">
+                <div className="h-7 w-px animate-scroll-drop bg-gradient-to-b from-transparent to-secondaryText"></div>
+                <span className="text-[10px] uppercase tracking-[2px] text-mutedText">Scroll</span>
+            </div>
+            </RevealSection>
+
+            {/* <DownArrow /> */}
         </Section>
     )
 }
+

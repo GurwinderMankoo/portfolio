@@ -2,10 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg: #0b0f1a;
+  --bg-card: #111827;
+  --bg-card2: #0d1320;
+
+  --surface: rgba(255,255,255,0.04);
+  --border: rgba(255,255,255,0.08);
+  --border-strong: rgba(255,255,255,0.14);
+
+  --text-primary: #f1f5f9;
+  --text-secondary: rgba(255,255,255,0.5);
+  --text-muted: rgba(255,255,255,0.28);
+
+  --accent: #818cf8;
+  --accent-hover: #6366f1;
+  --accent-glow: rgba(129,140,248,0.15);
+
+  --syntax-keyword: #f472b6;
+  --syntax-function: #22d3ee;
+  --syntax-string: #34d399;
+  --syntax-variable: #fb923c;
+  --syntax-type: #fbbf24;
+}
+
+html:not(.dark) {
+  --bg: #f8f9ff;
+  --bg-card: #ffffff;
+  --bg-card2: #f0f1ff;
+
+  --surface: rgba(99,102,241,0.05);
+  --border: rgba(99,102,241,0.12);
+  --border-strong: rgba(99,102,241,0.22);
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+
+  --accent: #6366f1;
+  --accent-hover: #4f46e5;
+  --accent-glow: rgba(99,102,241,0.1);
+
+  --syntax-keyword: #9333ea;
+  --syntax-function: #0369a1;
+  --syntax-string: #059669;
+  --syntax-variable: #c2410c;
+  --syntax-type: #b45309;
+}
+
 
 @layer base {
   .font-outline-half {
-    /* -webkit-text-stroke: 0.5px rgb(229,232,233); */
     -webkit-text-stroke: 1px;
     -webkit-text-stroke-color: rgb(229,232,233);
   }
@@ -17,52 +64,18 @@
   }
 }
 
-@layer components {
-  .new-gradient {
-    background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(255, 255, 255)
-    )
-    rgb(214, 219, 220);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-[data-theme='dark']{
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 html {
   scroll-behavior: smooth;
 }
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    transition: background 0.3s, color 0.3s;
 }
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
 
 .typewriter::after{
   content: '';
@@ -108,4 +121,13 @@ body {
    70% { transform: translate(0px,-5px) }
    90% { transform: translate(-1px,0px) }
   100% { transform: translate(0,0px) }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+}
+
+html:not(.dark) .floating-chip {
+  box-shadow: 0 4px 20px rgba(99,102,241,0.1);
 }

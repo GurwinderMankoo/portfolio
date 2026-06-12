@@ -8,26 +8,27 @@ interface TextAreaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement
 
 export default function TextArea({ error, label, id, ...rest }: TextAreaProps) {
     return (
-        <div className='relative w-full mb-6 md:mb-0'>
+        <div className='relative w-full mb-5'>
             <label
                 htmlFor={id}
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
+                className="mb-2 block text-[13px] font-medium text-secondaryText"
             >
-                {
-                    label
-                }
+                {label}
             </label>
             <textarea
                 id={id}
-                className={`shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:shadow-sm-light ${error ? 'border-red-500 dark:border-red-500 focus:ring-red-500' : 'focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500'}`}
-                {...rest}
-            >
-            </textarea>
-            {!!error && <p className="text-red-500 text-xs italic absolute -bottom-5">
-                {
+                className={`w-full rounded-xl border bg-surface/40 px-4 py-3 text-[13.5px] text-primaryText placeholder:text-mutedText transition-all duration-200 outline-none resize-y min-h-[100px] ${
                     error
-                }
-            </p>}
+                        ? 'border-red-500/60 focus:border-red-500 focus:ring-1 focus:ring-red-500/20'
+                        : 'border-border focus:border-accent/50 focus:ring-1 focus:ring-accent/10 hover:border-borderStrong'
+                }`}
+                {...rest}
+            />
+            {!!error && (
+                <p className="absolute -bottom-4 text-[11px] text-red-400">
+                    {error}
+                </p>
+            )}
         </div>
     )
 }

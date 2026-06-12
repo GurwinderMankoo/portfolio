@@ -1,5 +1,5 @@
 import { emailRegx } from "@/app/components/common/global";
-import { ContactErrors } from "@/app/components/contact/CustomForm";
+import type { ContactErrors } from "@/app/components/contact/CustomForm";
 import { transport, mailOptions } from "@/app/config/nodemailer";
 import { NextResponse } from "next/server"
 

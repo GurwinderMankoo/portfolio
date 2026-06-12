@@ -42,7 +42,7 @@ export const links: link[] = [
 function Navbar({ }: Props) {
     return (
         <Nav>
-            <div className="max-w-screen-lg flex flex-wrap items-center justify-between mx-auto p-4">
+            <div className="max-w-screen-lg+ flex flex-wrap items-center justify-between mx-auto p-4">
                 <Link href="#" scroll={true} className="flex items-center">
                     <span className="self-center text-2xl font-bold whitespace-nowrap text-blue-700">
                         {"<"}Gurwinder {"/>"}

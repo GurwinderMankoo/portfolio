@@ -1,6 +1,6 @@
 "use client"
 
-import { Dispatch, SetStateAction, createContext, useContext, useEffect, useRef, useState } from "react"
+import { Dispatch, SetStateAction, createContext, useContext, useRef, useState } from "react"
 import { Project } from "../components/common/ProjectCard"
 import Modal from "../components/common/Modal"
 
@@ -42,7 +42,10 @@ export default function ModalProvider({ children }: Props) {
         if (!!project) {
             setState(project)
         }
-        modalRef.current?.showModal()
+
+        if (modalRef.current && !modalRef.current.open) {
+            modalRef.current.showModal()
+        }
     }
 
     const closeModal = () => {

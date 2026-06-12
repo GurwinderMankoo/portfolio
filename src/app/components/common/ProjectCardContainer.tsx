@@ -2,21 +2,20 @@
 import { useModal } from '@/app/store/ModalProvider'
 import React from 'react'
 import { Project } from './ProjectCard'
+import ProjectCard from './ProjectCard'
 
 type Props = {
-    children: React.ReactNode,
     project: Project
 }
 
-export default function ProjectCardContainer({ children, project }: Props) {
+export default function ProjectCardContainer({ project }: Props) {
 
     const { openModal } = useModal()
 
     return (
-        <div className='max-w-sm w-full' onClick={() => openModal(project)}>
-            {
-                children
-            }
-        </div>
+        <ProjectCard
+            project={project}
+            onClick={() => openModal(project)}
+        />
     )
 }

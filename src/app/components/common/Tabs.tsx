@@ -16,7 +16,6 @@ export default function Tabs({ tabs, preActive = 'work' }: Props) {
 
     const [active, setActive] = useState<string>('work');
 
-
     const activeHandler = (id: string): void => {
         setActive(id)
     }
@@ -27,36 +26,32 @@ export default function Tabs({ tabs, preActive = 'work' }: Props) {
 
     return (
         <>
-            <ul className="max-w-[200px] m-auto text-sm font-medium text-center text-gray-500 divide-x divide-gray-200 rounded-lg shadow flex dark:divide-gray-700 dark:text-gray-400">
-                {
-                    tabs.map((tab, i, arr) => (
-                        <li className="w-full" key={`content-${tab.id}`}>
-                            <a
-                                role='button'
-                                className={`inline-block w-full p-3 text-gray-900 ${i === 0 ? 'rounded-l-lg' : i === (arr.length - 1) ? 'rounded-r-lg' : ''} focus:ring-4 focus:ring-blue-300 ${tab.id === active ? "bg-blue-700 text-white" : "bg-gray-100 dark:bg-gray-700"} focus:outline-none  dark:text-white`}
-                                aria-current="page"
-                                onClick={() => activeHandler(tab.id)}
-                            >
-                                {
-                                    tab.name
-                                }
-                            </a>
-                        </li>
-                    ))
-                }
-            </ul>
-            <div className='mt-5'>
-                {
-                    tabs.map((tab, i) => (
-                        tab.id === active && <React.Fragment key={`${i}-contentmain-${tab.id}`}>
-                            {
-                                tab.content
-                            }
+            <div className="flex items-center justify-center gap-1 rounded-xl border border-border bg-surface/30 p-1 w-fit mx-auto">
+                {tabs.map((tab) => (
+                    <button
+                        key={tab.id}
+                        role="tab"
+                        onClick={() => activeHandler(tab.id)}
+                        className={`relative rounded-lg px-5 py-2 text-[13px] font-medium transition-all duration-200 ${
+                            active === tab.id
+                                ? 'bg-accent text-white shadow-[0_2px_8px_rgba(99,102,241,0.25)]'
+                                : 'text-secondaryText hover:text-primaryText hover:bg-surface/50'
+                        }`}
+                    >
+                        {tab.name}
+                    </button>
+                ))}
+            </div>
+
+            <div className='mt-8'>
+                {tabs.map((tab) => (
+                    tab.id === active && (
+                        <React.Fragment key={tab.id}>
+                            {tab.content}
                         </React.Fragment>
-                    ))
-                }
+                    )
+                ))}
             </div>
         </>
-
     )
 }
