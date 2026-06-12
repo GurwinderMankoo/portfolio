@@ -122,7 +122,7 @@ export default function Timeline({ }: Props) {
                                             alt={entry.logoAlt}
                                             width={32}
                                             height={32}
-                                            className="h-5 w-5 object-contain"
+                                            className="h-8 w-8 object-contain"
                                         />
                                     </div>
 
