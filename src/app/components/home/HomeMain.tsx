@@ -3,6 +3,7 @@ import Editor from "../common/Editor";
 import RevealSection from "../common/RevealSection";
 
 export default function HomeMain1() {
+
     return (
         <Section id="home" className="pt-[100px]">
             <div className="absolute rounded-full 
