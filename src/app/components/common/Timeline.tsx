@@ -57,7 +57,7 @@ const workExperience: WorkEntry[] = [
     },
     {
         company: "Leap of Faith",
-        role: "React Developer | Intern",
+        role: "React Developer",
         period: "November, 2019 - May, 2020",
         description:
             "Built interactive UIs and integrated third-party APIs using React and Next.js. Gained hands-on experience with modern front-end tooling and best practices in a fast-paced startup environment.",
