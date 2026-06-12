@@ -59,6 +59,7 @@ module.exports = {
       "reveal-right": "reveal-right 0.5s ease-out forwards",
       "reveal-scale": "reveal-scale 0.5s ease-out forwards",
       "reveal-fade": "reveal-fade 0.5s ease-out forwards",
+      "bounce-arrow": "bounce-arrow 2s ease-in-out infinite",
     },
     keyframes: {
         float: {
@@ -106,6 +107,10 @@ module.exports = {
         "reveal-fade": {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
+        },
+        "bounce-arrow": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-4px)" },
         },
       },
     },

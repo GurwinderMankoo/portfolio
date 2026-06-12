@@ -33,14 +33,14 @@ export default function UpArrow() {
             <div className="absolute top-0 left-3 right-3 h-[2px] rounded-full bg-gradient-to-r from-accent/0 via-accent/40 to-accent/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
             <Image
-                className='block dark:hidden transition-transform duration-300 group-hover:-translate-y-[1px]'
+                className='block dark:hidden transition-transform duration-300 group-hover:-translate-y-[1px] group-hover:animate-none animate-bounce-arrow'
                 src='/icons/double_arrow_up.svg'
                 alt='upward-arrow'
                 width={24}
                 height={24}
             />
             <Image
-                className='hidden dark:block transition-transform duration-300 group-hover:-translate-y-[1px]'
+                className='hidden dark:block transition-transform duration-300 group-hover:-translate-y-[1px] group-hover:animate-none animate-bounce-arrow'
                 src='/icons/double_arrow_up_white.svg'
                 alt='upward-arrow'
                 width={24}
