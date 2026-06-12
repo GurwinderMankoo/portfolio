@@ -44,7 +44,7 @@ export default function HomeMain1() {
                     </p>
 
                     <p className="mb-9 md:max-w-[390px] max-w-[500px] text-[13.5px] font-light leading-[1.8] text-mutedText">
-                        2+ years building scalable web apps with React, Next.js &amp; Redux.
+                        4+ years building scalable web apps with React, Next.js &amp; React Native.
                         Passionate about clean UI, performance, and developer experience.
                     </p>
 
@@ -61,17 +61,17 @@ export default function HomeMain1() {
 
                     <div className="flex gap-7 border-t border-border pt-7">
                         <div className="stat-item">
-                            <div className="mb-1 font-serif text-[26px] font-bold leading-none text-primaryText">2+</div>
+                            <div className="mb-1 font-serif text-[26px] font-bold leading-none text-primaryText">4+</div>
                             <div className="text-[11px] tracking-[0.3px] text-mutedText">Years experience</div>
                         </div>
                         <div className="mt-1 h-8 w-[0.5px] self-start bg-border"></div>
                         <div className="stat-item">
-                            <div className="mb-1 font-serif text-[26px] font-bold leading-none text-primaryText">10+</div>
+                            <div className="mb-1 font-serif text-[26px] font-bold leading-none text-primaryText">20+</div>
                             <div className="text-[11px] tracking-[0.3px] text-mutedText">Projects built</div>
                         </div>
                         <div className="mt-1 h-8 w-[0.5px] self-start bg-border"></div>
                         <div className="stat-item">
-                            <div className="mb-1 font-serif text-[26px] font-bold leading-none text-primaryText">7+</div>
+                            <div className="mb-1 font-serif text-[26px] font-bold leading-none text-primaryText">10+</div>
                             <div className="text-[11px] tracking-[0.3px] text-mutedText">Tech skills</div>
                         </div>
                     </div>

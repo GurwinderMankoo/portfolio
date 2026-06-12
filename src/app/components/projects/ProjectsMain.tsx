@@ -7,6 +7,9 @@ import FodaneWebsite from "../../../../public/projects/fodane-website.png";
 import ReelUpWebsite from "../../../../public/projects/reelup-website.png";
 import ReactRedux from "../../../../public/projects/react-redux.png";
 import Placeholder from "../../../../public/projects/placeholder.svg"
+import ReelUP from "../../../../public/projects/reelup-app.png"
+import Fodane from "../../../../public/projects/fodane.png"
+import COD from "../../../../public/projects/COD-form.png"
 
 type Props = {}
 
@@ -28,7 +31,7 @@ export const projects = [
         technologies: [
             'React Js', 'React-Router-Dom', 'Shopify-Polaris', 'Shopify-App-Bridge', 'Context API', 'TypeScript', 'Scss'
         ],
-        img: Placeholder
+        img: ReelUP
     },
     {
         name: 'GOAT COD Form',
@@ -38,7 +41,7 @@ export const projects = [
         technologies: [
             'React Js', 'React-Router-Dom', 'Shopify-Polaris', 'Shopify-App-Bridge', 'Context API', 'TypeScript', 'Scss'
         ],
-        img: Placeholder
+        img: COD
     },
     {
         name: 'Fodane',
@@ -48,7 +51,7 @@ export const projects = [
         technologies: [
             'React Js', 'React-Router-Dom', 'Shopify-Polaris', 'Shopify-App-Bridge', 'Context API', 'TypeScript', 'Scss'
         ],
-        img: Placeholder
+        img: Fodane
     },
     {
         name: 'Fodane Website',

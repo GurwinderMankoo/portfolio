@@ -14,6 +14,33 @@ type WorkEntry = {
 }
 
 const workExperience: WorkEntry[] = [
+        {
+        company: "Reelup Pvt. Ltd",
+        role: "Senior Front End Engineer",
+        period: "February, 2024 - November, 2024",
+        description:
+            "Led the design and development of scalable, high-performance web applications using React and Next.js. Drove frontend architecture, improved application performance, mentored engineers, and collaborated with cross-functional teams to deliver reliable, user-centric solutions.",
+        skills: [
+            "React",
+            "Next.js",
+            "TypeScript",
+            "JavaScript",
+            "Redux",
+            "Frontend Architecture",
+            "System Design",
+            "Performance Optimization",
+            "Design Systems",
+            "REST APIs",
+            "GraphQL",
+            "Testing",
+            "CI/CD",
+            "Shopify",
+            "GitHub",
+            "Agile"
+        ],
+        logo: "/icons/reel-up-logo.svg",
+        logoAlt: "ReelUp Pvt. Ltd.",
+    },
     {
         company: "Plusbooster Pvt. Ltd",
         role: "Front End Engineer",
