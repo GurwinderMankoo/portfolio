@@ -1,9 +1,9 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import Navbar from './components/navbar/Main'
-import ModalProvider from './store/ModalProvider'
-import ScrollObserverProvider from './store/ScrollObserver'
-import ThemeSwitcher from './components/common/ThemeSwitcher'
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import Navbar from './components/navbar/Main';
+import ModalProvider from './store/ModalProvider';
+import ScrollObserverProvider from './store/ScrollObserver';
+import ThemeSwitcher from './components/common/ThemeSwitcher';
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
