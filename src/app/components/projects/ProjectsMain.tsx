@@ -15,15 +15,6 @@ type Props = {}
 
 export const projects = [
     {
-        name: 'React Redux Demo',
-        content: 'This is demo app. You can checkout coding implementations. Redux and Typescript is used in this app.',
-        id: 1,
-        url: 'https://codesandbox.io/s/react-redux-demo-forked-4g4k5v?file=/src/App.tsx',
-        technologies: [
-            'React Js', 'React-Router-Dom', 'Redux', 'TypeScript', 'Css Modules',
-        ],
-        img: ReactRedux
-    }, {
         name: 'ReelUp',
         content: 'Shopify embaded app created using many library',
         id: 2,
@@ -68,13 +59,23 @@ export const projects = [
         name: 'ReelUp',
         content: 'Shopify embaded app created using many library',
         id: 6,
-        url: 'https://dev.reelup.io/',
+        url: 'https://reelup.io/',
         technologies: [
             'NextJs',
             'Increment Site Genration',
             "MDX"
         ],
         img: ReelUpWebsite
+    },
+    {
+        name: 'React Redux Demo',
+        content: 'This is demo app. You can checkout coding implementations. Redux and Typescript is used in this app.',
+        id: 1,
+        url: 'https://codesandbox.io/s/react-redux-demo-forked-4g4k5v?file=/src/App.tsx',
+        technologies: [
+            'React Js', 'React-Router-Dom', 'Redux', 'TypeScript', 'Css Modules',
+        ],
+        img: ReactRedux
     },
 ]
 

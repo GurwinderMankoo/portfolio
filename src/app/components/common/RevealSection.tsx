@@ -46,10 +46,6 @@ export default function RevealSection({
         return () => observer.disconnect()
     }, [])
 
-    useEffect(() => {
-        console.log(isVisible, "isVisible")
-    }, [isVisible])
-
     return (
         <div
             ref={ref}
